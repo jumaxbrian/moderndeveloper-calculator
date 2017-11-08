@@ -6,75 +6,76 @@
     <title>Calculator</title>
     <link type="text/css" rel="stylesheet" href="calculator.css" />
     <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css' />
+    <script src="script.js"></script>
 </head>
 
 <body>
     <div class="container">
 
         <div id="numbers-signs">
-            <div class="screen hundred">
+            <div id="screen-input" class="screen hundred">
                 <input type="text" value="0">
             </div>
             <div id="numbers" class="eighty">
                 <div class="clear sixty-six">
-                    <button class="hundred light-red">CLEAR</button>
+                    <button class="hundred light-red" onclick="resetScreenInput()">CLEAR</button>
                 </div>
                 <div class="c thirty-three">
-                    <button class="hundred light-red">C</button>
+                    <button class="hundred light-red" onclick="resetScreenInput()">C</button>
                 </div>
                 <div class="7 thirty-three">
-                    <button class="hundred light-black">7</button>
+                    <button class="hundred light-black" onclick="keyPress('7')">7</button>
                 </div>
                 <div class="8 thirty-three">
-                    <button class="hundred light-black">8</button>
+                    <button class="hundred light-black" onclick="keyPress('8')">8</button>
                 </div>
                 <div class="9 thirty-three">
-                    <button class="hundred light-black">9</button>
+                    <button class="hundred light-black" onclick="keyPress('9')">9</button>
                 </div>
                 <div class="4 thirty-three">
-                    <button class="hundred light-black">4</button>
+                    <button class="hundred light-black" onclick="keyPress('4')">4</button>
                 </div>
                 <div class="5 thirty-three">
-                    <button class="hundred light-black">5</button>
+                    <button class="hundred light-black" onclick="keyPress('5')">5</button>
                 </div>
                 <div class="6 thirty-three">
-                    <button class="hundred light-black">6</button>
+                    <button class="hundred light-black" onclick="keyPress('6')">6</button>
                 </div>
                 <div class="1 thirty-three">
-                    <button class="hundred light-black">1</button>
+                    <button class="hundred light-black" onclick="keyPress('1')">1</button>
                 </div>
                 <div class="2 thirty-three">
-                    <button class="hundred light-black">2</button>
+                    <button class="hundred light-black" onclick="keyPress('2')">2</button>
                 </div>
                 <div class="3 thirty-three">
-                    <button class="hundred light-black">3</button>
+                    <button class="hundred light-black" onclick="keyPress('3')">3</button>
                 </div>
                 <div class="dot thirty-three">
-                    <button class="hundred light-black">.</button>
+                    <button class="hundred light-black" onclick="keyPress('.')">.</button>
                 </div>
                 <div class="0 thirty-three">
-                    <button class="hundred light-black">0</button>
+                    <button class="hundred light-black" onclick="keyPress('0')">0</button>
                 </div>
                 <div class="equals thirty-three">
-                    <button class="hundred darker-cyan">=</button>
+                    <button class="hundred darker-cyan" onclick="evaluateInput()">=</button>
                 </div>
             </div>
             <div id="signs">
 
                 <div class="del hundred">
-                    <button class="hundred darker-cyan">DEL</button>
+                    <button class="hundred darker-cyan" onclick="removeLastCharOnScreenInput()">DEL</button>
                 </div>
                 <div class="addition hundred ">
-                    <button class="hundred darker-black">+</button>
+                    <button class="hundred darker-black" onclick="keyPress('+')">+</button>
                 </div>
                 <div class="subtraction hundred">
-                    <button class="hundred darker-black">-</button>
+                    <button class="hundred darker-black" onclick="keyPress('-')">-</button>
                 </div>
                 <div class="division hundred">
-                    <button class="hundred darker-black">/</button>
+                    <button class="hundred darker-black" onclick="keyPress('/')">/</button>
                 </div>
                 <div class="multiplication hundred">
-                    <button class="hundred darker-black">x</button>
+                    <button class="hundred darker-black" onclick="keyPress('*')">*</button>
                 </div>
             </div>
         </div>
